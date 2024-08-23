@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Color Palette
+% I'm just trying to find a color palette for université de lorraine <3
+\definecolor{main}{rgb}{0.74, 0.2, 0.64}
+\definecolor{light}{rgb}{1.00,0.90,0.98}
+\definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
+\definecolor{bananamania}{rgb}{0.98, 0.91, 0.71}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Metropolis theme
+\usetheme[numbering=fraction, progressbar=frametitle]{metropolis}
+\usecolortheme{seahorse}
+\setbeamercolor*{palette primary}{use=structure,fg=black,bg=arylideyellow}
+%\setbeamercovered{transparent} 
+\setbeamertemplate{background canvas}[vertical shading][bottom=lightgray!10,top=arylideyellow!20]
+\setbeamerfont{section in toc}{size=\Large}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Progression bar
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{2pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pretty Box
+\global\mdfdefinestyle{box}{%
+middlelinewidth=2pt, linecolor=arylideyellow,roundcorner=5pt, backgroundcolor=bananamania
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table of content
+\newcommand{\maketoc}{
+    \label{toc}
+    %\setbeamertemplate{section in toc}[circle]
+    %\tableofcontents[hideallsubsections]
+    \part{Table of contents}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Random DON'T TOUCH
+\pdfstringdefDisableCommands{%
+\def\translate#1{#1}%
+}

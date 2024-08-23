@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title page (don't modify)
+
+\setbeamertemplate{title page}{
+    \begin{minipage}[c][\paperheight]{\textwidth}
+        \ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+        \vfill
+        \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+        \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+        \usebeamertemplate*{title separator}
+        \begin{minipage}[t]{.5\textwidth}
+            \ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+            \vspace*{0.5em}
+            \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+            \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+        \end{minipage}
+        \begin{minipage}[t]{.5\textwidth}
+            \vspace*{2em}
+            {\hspace{3.2em}\small Supervisor: \textit{supervisor} \par}
+            \vspace*{0.2em}
+            {\hspace{3.2em}\small Company: \textit{\company}}
+        \end{minipage}
+        \vfill
+        \hspace{9.7cm}\scalebox{.4}{Beamer model by Prunelle DT}
+    \end{minipage}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titlegraphic (can modify)
+% Attention, you will go crazy trying to place your image, if you don't see some, you push them outside of the frame, try reducing your vspace/hspace to see it again, good luck <3
+% Notes for all images : prefer transparant background to white one, crop them precisely to be able to place them where you want withouh overfull hbox/vbox
+\titlegraphic{ 
+    {\hspace{8.2cm}\includegraphics[height=3cm]{\logo}}
+    
+    \vspace{3.6cm}
+    
+    {\includegraphics[width=2.5cm]{config/logos/idmc.png}
+    \hspace{0.5cm}
+    \includegraphics[width=2cm]{config/logos/ul.png}
+    \hspace{2.2cm}
+    \includegraphics[width=3cm]{\logoCompany}
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Section page
+\AtBeginSection{
+  \frame[plain,noframenumbering]{
+    \sectionpage
+    \center\hyperlink{toc}{\includegraphics[height=4cm]{\logo}}
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Subsection page
+\AtBeginSubsection{
+  \frame[plain,noframenumbering]{
+    \subsectionpage
+    \center\hyperlink{toc}{\includegraphics[height=4cm]{\logo}}
+  }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Part page (appendice)
+\setbeamertemplate{part page}{
+        \begin{beamercolorbox}[sep=8pt,center,wd=\textwidth]{part title}
+            \usebeamerfont{part title}\insertpart\par
+        \end{beamercolorbox}
+}
+
+\makeatletter
+\AtBeginPart{%
+  \beamer@tocsectionnumber=0\relax
+  \setcounter{section}{0}
+  \frame[plain,noframenumbering]{
+    \partpage
+    \setbeamertemplate{section in toc}[circle]
+    \tableofcontents[hideallsubsections]
+  }
+}
+\makeatother

@@ -1,0 +1,121 @@
+\section{Some cool tricks}
+\subsection{Overlays}
+
+\begin{frame}{The most simple example}
+
+    \small \centering Freedom was a livestream concert by Filipino singer Regine Velasquez (pictured) held on February 28, 2021.\pause Following the cancellation of music events during the outbreak of the COVID-19 pandemic, Velasquez organized the show to create a live experience on a stream for her fans longing for a sense of human connection.\pause The concert's premise was "freedom of singing", stemming from her desire to cover songs from several music genres.\pause It was filmed at the studios of ABS-CBN in Metro Manila, with musicians, background vocalists, and dancers on set, and was broadcast through four livestreaming platforms worldwide.\pause Its set featured a large LED screen as a backdrop and props resembling origami cranes hanging from the ceiling.\pause She performed numerous selections from artists such as Elton John, Chris Isaak, George Michael, Sara Bareilles, Dua Lipa, and Billie Eilish.\pause Critics gave the show high praise for its production and vocal performances, setting a benchmark for online concerts in the Philippines.
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{How Much Can I Put On a Frame?}
+
+    \begin{enumerate}
+        \item<1->  A usual frame should have between 20 and 40 words. The maximum should be at about 80 words
+        \item<2->  Do not assume that everyone in the audience is an expert on the subject matter, give definition
+        \item<3->  Never put anything on a slide that you are not going to explain during the talk
+        \item<4->  Keep it simple. Typically, your audience will see a slide for less than 50 seconds
+        \item<5->  Less math is better, use English
+    \end{enumerate}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Structuring a Frame}
+
+    \begin{enumerate} % + -> increment without giving a number everytime
+        \item<+-| alert@+> Use block environments
+        \item<+-| alert@+> Prefer enumerations and itemize environments
+        \item<+-| alert@+> Do not itemize in itemize (same with enumerate)
+        \item<+-| alert@+> Do not create endless itemize or enumerate lists
+        \item<+-| alert@+> Do not uncover lists piecewise ( what i'm currently doing)
+        \item<+-| alert@+> Emphasis is an important part of creating structure
+        \item<+-| alert@+> Use columns
+        \item<+-| alert@+> Never use footnotes
+        \item<+-| alert@+> Use quote or quotation to typeset quoted text
+        \item<+-| alert@+> Do not use the option allowframebreaks except for long bibliographies
+        \item<+-| alert@+> Do not use long bibliographies
+    \end{enumerate}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Writing the Text}
+
+    \uncover<1-2>{\centering \large USE SHORT SENTENCES} % the rest of the slide doesn't move when this disappear
+
+    \begin{enumerate}
+        \item<1-> Prefer phrases over complete sentences % <1-> means from slide 1 to the end
+        \item<1-> Punctuate correctly: no punctuation after phrases, complete punctuation in and after complete sentences % <1-2> for slides 1 and 2
+        \item<2-> Never use a smaller font size to “fit more on a frame.” Never ever use the evil option shrink % here we have 2 point appaering in thesame time
+        \item<2-> Do not hyphenate words 
+        \item<2-2> Break lines “by hand” using the command \textbackslash\textbackslash . Do not rely on automatic line breaking
+        \item<1-2> Do not hyphenate words 
+    \end{enumerate}
+
+    \uncover<3->{Don't wrote \textit{too much}.} % then later this appear
+    
+\end{frame}
+
+\begin{frame}[fragile]{An Algorithm For Finding Prime Numbers.} % use fragile for verbatim or lstlisting
+    \begin{verbatim} 
+int main (void)
+{
+    std::vector<bool> is_prime (100, true);
+    for (int i = 2; i < 100; i++)
+    if (is_prime[i])
+    {
+        std::cout << i << " ";
+        for (int j = i; j < 100; is_prime[j]
+                             = false, j+=i);
+    }
+    return 0;
+}
+    \end{verbatim} % pay attention to the tabulation for verbatim
+    
+    \begin{uncoverenv}<2>
+        Note the use of \verb|std::|.
+    \end{uncoverenv}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{An Algorithm For Finding Primes Numbers.}
+    \begin{semiverbatim}
+\uncover<1->{\alert<0>{int main (void)}}
+\uncover<1->{\alert<0>{\{}}
+\uncover<1->{\alert<1>{    \alert<4>{std::}vector<bool> is_prime (100, true);}}
+\uncover<1->{\alert<1>{    for (int i = 2; i < 100; i++)}}
+\uncover<2->{\alert<2>{    if (is_prime[i])}}
+\uncover<2->{\alert<0>{    \{}}
+\uncover<3->{\alert<3>{        \alert<4>{std::}cout << i << " ";}}
+\uncover<3->{\alert<3>{        for (int j = i; j < 100;}}
+\uncover<3->{\alert<3>{        is_prime [j] = false, j+=i);}}
+\uncover<2->{\alert<0>{    \}}}
+\uncover<1->{\alert<0>{    return 0;}}
+\uncover<1->{\alert<0>{\}}}
+    \end{semiverbatim}
+    
+    \visible<4->{Note the use of \alert{\texttt{std::}}.} % with visible, the text is invisible not transparent
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Mediaaaaa}
+
+% To know how to animate : https://tex.stackexchange.com/questions/240243/getting-gif-and-or-moving-images-into-a-latex-presentation
+
+\begin{frame}{Embedded Animation}
+    \begin{figure}
+        \centering
+        \animategraphics[loop,autoplay,width=0.8\linewidth]{33}{img/animation/Glivenko/Glivenko-}{0}{99}
+        % to have more explanation don't hesitate to ask
+        \caption{\href{https://tex.stackexchange.com/questions/240243/getting-gif-and-or-moving-images-into-a-latex-presentation}{To know how to animate (click)}}
+    \end{figure}
+
+    \centering \large attention, it doesn't show in overleaf, requires a JavaScript-supporting PDF
+  
+\end{frame}

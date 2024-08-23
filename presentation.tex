@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MODEL MADE BY PRUNELLE DAUDRÉ--TREUIL, USE AT YOUR OWN RISK, YOU HAVE BEEN      %
+% WARNED !                                                                        %
+% COPYRIGHT : CC-BY-SA                                                            %
+% LAST UPDATE : 12-04-2024                                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Compilation option
+\documentclass{beamer} % the most basic compilation
+
+%\documentclass[draft]{beamer} % to compile quickly without image
+%\documentclass[handout]{beamer} % to compile whithout transitions (handout) + following lines
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm] % 2 slides by page, vertical
+%\pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=5mm] % 4 slides by page, horizontal
+%\pgfpagesuselayout{8 on 1}[a4paper,border shrink=5mm] % 8 slides by page, vertical
+%\pgfpagesuselayout{16 on 1}[a4paper,landscape,border shrink=5mm] % 16 slides by page, horizontal 
+%\documentclass{article} % tansform the slides in article, attention a lot of lines that change
+%\usepackage{beamerarticle} % parameters will react strangely to it
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuration
+
+\input{config.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT BODY   
+
+\begin{document}
+
+\maketitle
+\maketoc
+%\label{toc}
+%\part{Table of contents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Examples slides
+\include{slides/sections/intro}
+% \include{slides/sections/efficiency}
+% \include{slides/sections/tricks}
+
+\section*{See the beamer manual for more overlays} % a "sectionpage" not in toc
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix % Hidden slides to be ready to answer some tricky questions
+
+% \include{slides/appendices/r2}
+
+\end{document}
