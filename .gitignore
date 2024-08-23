@@ -13,3 +13,5 @@
 *.toc
 *blx.bib
 *.pdf
+*.snm
+*.nav
